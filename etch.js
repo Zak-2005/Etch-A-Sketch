@@ -42,10 +42,11 @@ const clear = document.createElement('button');
 const bottom = document.querySelector('.bottom');
 clear.textContent='clear';
 clear.classList.add('clear');
+const divCol = document.querySelectorAll('.divCol');
 clear.addEventListener('click', function(){
-    while(grid.hasChildNodes()){
-        grid.removeChild(grid.firstChild);
-    }
+    divCol.forEach((div)=>{
+        div.classList.remove('hover');
+    })
 });
 bottom.appendChild(clear);
 
