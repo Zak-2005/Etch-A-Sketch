@@ -42,12 +42,15 @@ const clear = document.createElement('button');
 const bottom = document.querySelector('.bottom');
 clear.textContent='clear';
 clear.classList.add('clear');
-const divCol = document.querySelectorAll('.divCol');
 clear.addEventListener('click', function(){
-    divCol.forEach((div)=>{
-        div.classList.remove('hover');
-    })
+    reset();
 });
 bottom.appendChild(clear);
 
+function reset(){
+    const divCol = document.querySelectorAll('.divCol');
+    divCol.forEach((div)=>{
+        div.classList.remove('hover');
+    })
+}
 
